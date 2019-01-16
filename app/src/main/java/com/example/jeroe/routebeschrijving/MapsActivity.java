@@ -52,8 +52,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     //DateTime now = new DateTime();
 
-    LatLng startLatLng = new LatLng(30.707104, 76.690749);
-    LatLng endLatLng = new LatLng(30.721419, 76.730017);
+    //LatLng startLatLng = new LatLng(30.707104, 76.690749);
+    //LatLng endLatLng = new LatLng(30.721419, 76.730017);
 
 
     @Override
@@ -120,28 +120,60 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mGoogleApiClient
             );
         }
-        LatLng latLng = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
-        mMap.addMarker(new MarkerOptions().position(latLng).title("je bent hier"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        LatLng MarkerBlijdorp = new LatLng(51.925605, 4.453758);
+        mMap.addMarker(new MarkerOptions().position(MarkerBlijdorp).title("Blijdorp"));;
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
+
+        LatLng leeuwen = new LatLng(51.927983, 4.447177);
+        mMap.addMarker(new MarkerOptions().position(leeuwen).title("leeuwen: 11:00"));;
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
+
+        LatLng ijsberen = new LatLng(51.927375, 4.445000);
+        mMap.addMarker(new MarkerOptions().position(ijsberen).title("ijsberen: 10:00"));;
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
+
+        LatLng bengaalse_oehoe = new LatLng(51.927162, 4.446963);
+        mMap.addMarker(new MarkerOptions().position(bengaalse_oehoe).title("bengaalse oehoe: 13:00"));;
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
+
+
+        LatLng pinguins = new LatLng(51.928557, 4.445173);
+        mMap.addMarker(new MarkerOptions().position(pinguins).title("penguins: 12:00"));;
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
+
+        LatLng hyenas = new LatLng(51.92609, 4.452294);
+        mMap.addMarker(new MarkerOptions().position(hyenas).title("hyenas: 14:00"));;
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
+
+        LatLng apen = new LatLng(51.926728, 4.449713);
+        mMap.addMarker(new MarkerOptions().position(apen).title("apen: 15:00"));;
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
+
+
+
+        float zoomLevel = 16.0f; //This goes up to 21
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MarkerBlijdorp, zoomLevel));
     }
+
+
 
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
 
-    public boolean checkLocationPermission() {
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.ACCESS_FINE_LOCATION)) {
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                        MY_PERMISSIONS_REQUEST_LOCATION);
-            }
-            return false;
-        } else {
-            return true;
-        }
-    }
+//    public boolean checkLocationPermission() {
+//        if (ContextCompat.checkSelfPermission(this,
+//                Manifest.permission.ACCESS_FINE_LOCATION)
+//                != PackageManager.PERMISSION_GRANTED) {
+//            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+//                    Manifest.permission.ACCESS_FINE_LOCATION)) {
+//                ActivityCompat.requestPermissions(this,
+//                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+//                        MY_PERMISSIONS_REQUEST_LOCATION);
+//            }
+//            return false;
+//        } else {
+//            return true;
+//        }
+//    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
@@ -198,6 +230,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+
 
 
     @Override
