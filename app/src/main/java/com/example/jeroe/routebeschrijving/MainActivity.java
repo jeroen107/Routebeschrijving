@@ -32,5 +32,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClick4(View view){
+        Intent intent = new Intent(this,MapsActivity2.class);
+        startActivity(intent);
+    }
 
 }

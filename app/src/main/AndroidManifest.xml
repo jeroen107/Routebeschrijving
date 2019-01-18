@@ -30,6 +30,9 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".MapsActivity2"
+            android:label="@string/title_activity_maps2"></activity>
+        <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps">
             <intent-filter>
@@ -39,9 +42,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity
-            android:name=".MapsActivity2"
-            android:label="@string/title_activity_maps2"></activity>
     </application>
 
 </manifest>
