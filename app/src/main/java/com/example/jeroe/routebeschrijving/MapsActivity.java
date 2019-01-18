@@ -128,13 +128,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(leeuwen).title("leeuwen: 11:00"));;
         mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
 
-        LatLng ijsberen = new LatLng(51.927375, 4.445000);
-        mMap.addMarker(new MarkerOptions().position(ijsberen).title("ijsberen: 10:00"));;
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
 
-        LatLng bengaalse_oehoe = new LatLng(51.927162, 4.446963);
-        mMap.addMarker(new MarkerOptions().position(bengaalse_oehoe).title("bengaalse oehoe: 13:00"));;
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
+
+
 
 
         LatLng pinguins = new LatLng(51.928557, 4.445173);

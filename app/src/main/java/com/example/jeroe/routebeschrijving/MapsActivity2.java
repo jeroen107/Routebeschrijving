@@ -128,11 +128,11 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         mMap.addMarker(new MarkerOptions().position(leeuwen).title("leeuwen: 11:00"));;
         mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
 
-        LatLng ijsberen = new LatLng(51.927375, 4.445000);
+        LatLng ijsberen = new LatLng(51.928273, 4.453536);
         mMap.addMarker(new MarkerOptions().position(ijsberen).title("ijsberen: 10:00"));;
         mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
 
-        LatLng bengaalse_oehoe = new LatLng(51.927162, 4.446963);
+        LatLng bengaalse_oehoe = new LatLng(51.928250, 4.450757);
         mMap.addMarker(new MarkerOptions().position(bengaalse_oehoe).title("bengaalse oehoe: 13:00"));;
         mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
 
@@ -141,13 +141,6 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         mMap.addMarker(new MarkerOptions().position(pinguins).title("penguins: 12:00"));;
         mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
 
-        LatLng hyenas = new LatLng(51.92609, 4.452294);
-        mMap.addMarker(new MarkerOptions().position(hyenas).title("hyenas: 14:00"));;
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
-
-        LatLng apen = new LatLng(51.926728, 4.449713);
-        mMap.addMarker(new MarkerOptions().position(apen).title("apen: 15:00"));;
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(MarkerBlijdorp));
 
 
 
